@@ -19,7 +19,7 @@ var collection *mongo.Collection
 
 func main() {
 	// Set up MongoDB connection
-	clientOptions := options.Client().ApplyURI("mongodb+srv://saanjeev:saanjeev@cluster0.iqret.mongodb.net/")
+	clientOptions := options.Client().ApplyURI("see env url")
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
 		log.Fatal(err)
