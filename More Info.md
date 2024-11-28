@@ -39,4 +39,22 @@ v2 := r.Group("/v2")
 
 Binding and Validation
 Gin provides built-in support for binding and validating JSON, XML, and form data. This simplifies the process of handling request payloads and ensuring they meet expected formats.
+```
+type Login struct {
+    User     string `form:"user" json:"user" binding:"required"`
+    Password string `form:"password" json:"password" binding:"required"`
+}
+
+func main() {
+    r := gin.Default()
+    r.POST("/loginJSON", func(c *gin.Context) {
+        var json Login
+        if err := c.ShouldBindJSON(&json); err != nil {
+            c.JSON(400, gin.H{"error": err.Error()})
+            return
+        }
+        c.JSON(200, gin.H{"status": "you are logged in"})
+    })
+}
+```
 
