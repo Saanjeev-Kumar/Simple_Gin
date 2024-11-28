@@ -58,6 +58,15 @@ func main() {
 }
 ```
 Error Handling
+```
 Error handling in Gin is straightforward and provides multiple ways to capture and respond to errors.
+func main() {
+    r := gin.Default()
+    r.GET("/error", func(c *gin.Context) {
+        c.AbortWithStatusJSON(500, gin.H{"error": "Internal Server Error"})
+    })
+}
+```
+
 
 
