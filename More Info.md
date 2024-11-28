@@ -19,3 +19,20 @@ func Logger() gin.HandlerFunc {
     }
 }
 ```
+Grouping Routes
+Gin allows for route grouping, which is a convenient way to organize routes with common middleware or URL prefixes.
+
+```
+v1 := r.Group("/v1")
+{
+    v1.GET("/login", loginEndpoint)
+    v1.GET("/submit", submitEndpoint)
+    v1.GET("/read", readEndpoint)
+}
+v2 := r.Group("/v2")
+{
+    v2.POST("/login", loginEndpoint)
+    v2.POST("/submit", submitEndpoint)
+    v2.POST("/read", readEndpoint)
+}
+```
