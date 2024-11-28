@@ -36,3 +36,7 @@ v2 := r.Group("/v2")
     v2.POST("/read", readEndpoint)
 }
 ```
+
+Binding and Validation
+Gin provides built-in support for binding and validating JSON, XML, and form data. This simplifies the process of handling request payloads and ensuring they meet expected formats.
+
