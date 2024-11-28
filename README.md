@@ -18,3 +18,8 @@ Error Management: Comprehensive error handling and management, making it easy to
 Template Rendering: Supports HTML rendering and template engines, making it convenient to develop dynamic web pages.
 
 Logging: Integrated logging capabilities for monitoring and debugging purposes.
+
+
+Installation: To install Gin, you can use the following Go command:
+
+go get -u github.com/gin-gonic/gin
